@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="BuyDatabase Store: บล็อกสไตล์ Blogger 2.0 รวมลิงก์ข้อมูลแบบอ่านง่าย โหลดเร็ว เหมาะกับ GitHub Pages" />
+  <title>BuyDatabase Store | บล็อกข้อมูล & Directory</title>
+
+  <!-- Domain baru -->
+  <link rel="canonical" href="https://buydatabase.store/" />
+  <meta name="google-site-verification" content="vCKi-MB9iWmbXzsX4G7E-aI-jvOHrdf6uojJT8iLSIs" />
+  <meta name="google-site-verification" content="HBG7SaS-DmFFiYnfI-vT2LOdw3gM2AK3wbmnixc4zR8" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BuyDatabase Store | บล็อกข้อมูล & Directory" />
+  <meta property="og:description" content="หน้าเว็บสไตล์ Blogger 2.0: โพสต์ + ไซด์บาร์ + ลิสต์ลิงก์ โหลดไว โครงสร้างสะอาด" />
+  <meta property="og:url" content="https://buydatabase.store/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="okey.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="okey.png">
+  <link rel="apple-touch-icon" href="okey.png">
+
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Simple schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"BuyDatabase Store",
+    "url":"https://buydatabase.store/",
+    "inLanguage":"th",
+    "description":"บล็อกสไตล์ Blogger 2.0 สำหรับรวมโพสต์และลิงก์ข้อมูล จัดหมวดหมู่ชัดเจน โหลดเร็ว"
+  }
+  </script>
+
+  <style>
+    :root{
+      /* Blogger-ish palette (beda total dari portal) */
+      --bg:#f3f1ea;
+      --paper:#ffffff;
+      --ink:#1d2533;
+      --muted:#5e6a7f;
+
+      --line:#ded7c9;
+
+      --brand:#2e4a7f;       /* navy */
+      --brand2:#e07a1f;      /* orange */
+      --accent:#3b8f5a;      /* green */
+
+      --radius:12px;
+      --max: 1180px;
+
+      --shadow: 0 12px 28px rgba(29,37,51,.12);
+      --shadow2: 0 6px 14px rgba(29,37,51,.10);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans Thai", "Helvetica Neue", Arial;
+      color:var(--ink);
+      background:
+        linear-gradient(0deg, rgba(255,255,255,.55), rgba(255,255,255,.55)),
+        radial-gradient(1200px 420px at 12% 0%, rgba(46,74,127,.10), transparent 60%),
+        radial-gradient(900px 340px at 92% 10%, rgba(224,122,31,.10), transparent 55%),
+        var(--bg);
+      line-height:1.85;
+    }
+
+    a{color:inherit}
+    a:hover{opacity:.92}
+
+    .wrap{
+      width:min(var(--max), calc(100% - 44px));
+      margin:0 auto;
+    }
+
+    /* a11y */
+    .skip{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip:focus{
+      position:fixed; left:14px; top:14px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      z-index:9999;
+    }
+
+    /* Top strip */
+    .topstrip{
+      background: linear-gradient(90deg, var(--brand), #20355d);
+      color:#fff;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+      font-size: 13px;
+    }
+    .topstrip .inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 0;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.10);
+      white-space:nowrap;
+    }
+
+    /* Header: Blogger-ish */
+    header.sitehead{
+      padding: 18px 0 12px;
+    }
+    .mast{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .titlebox{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo{
+      width:52px;height:52px;
+      border-radius: 14px;
+      display:grid;place-items:center;
+      background:
+        radial-gradient(120% 120% at 30% 20%, rgba(255,255,255,.70), rgba(255,255,255,.10)),
+        linear-gradient(135deg, rgba(46,74,127,.20), rgba(224,122,31,.16));
+      border:1px solid var(--line);
+      box-shadow: var(--shadow2);
+      color: var(--brand);
+      font-weight: 1000;
+      letter-spacing:.5px;
+    }
+    .blogname{
+      font-weight:1000;
+      font-size: 28px;
+      letter-spacing: -.4px;
+      line-height:1.1;
+      margin:0;
+    }
+    .tagline{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size: 14px;
+    }
+
+    /* Menu bar (Blogger 2.0 feel) */
+    .menubar{
+      margin-top: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow2);
+      padding: 10px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .menu a{
+      text-decoration:none;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border:1px solid transparent;
+    }
+    .menu a:hover{
+      background: rgba(46,74,127,.06);
+      border-color: rgba(46,74,127,.12);
+    }
+    .menu a.active{
+      background: linear-gradient(180deg, rgba(224,122,31,.14), rgba(255,255,255,.90));
+      border:1px solid rgba(224,122,31,.22);
+      font-weight:900;
+    }
+    .search{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .search input{
+      width: min(320px, 52vw);
+      padding: 10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background:#fff;
+      outline:none;
+    }
+    .search input:focus{
+      border-color: rgba(46,74,127,.28);
+      box-shadow: 0 0 0 4px rgba(46,74,127,.10);
+    }
+
+    /* Main layout: posts + sidebar */
+    .layout{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 16px;
+      padding: 14px 0 18px;
+      align-items:start;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    /* Post */
+    .post{
+      padding: 18px 18px 16px;
+    }
+    .post .meta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      color: var(--muted);
+      font-size: 13px;
+      border-bottom: 1px dashed rgba(222,215,201,.9);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(46,74,127,.06);
+      border: 1px solid rgba(46,74,127,.12);
+      color: var(--brand);
+      font-weight: 800;
+      white-space:nowrap;
+    }
+    .post h1{
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3vw, 36px);
+      letter-spacing: -.35px;
+      line-height:1.15;
+    }
+    .post p{margin: 0 0 12px; color: var(--muted)}
+    .post a.inline{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(224,122,31,.35);
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .callout{
+      margin-top: 12px;
+      border-top: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(46,74,127,.04), rgba(255,255,255,.90));
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border:1px solid rgba(46,74,127,.22);
+      background: linear-gradient(180deg, rgba(224,122,31,.16), rgba(255,255,255,.92));
+      text-decoration:none;
+      font-weight: 900;
+      white-space:nowrap;
+    }
+
+    /* Sidebar widgets */
+    .widget{
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .widget:last-child{border-bottom:0}
+    .widget h3{
+      margin:0 0 10px;
+      font-size: 15px;
+      letter-spacing: -.1px;
+      color: var(--brand);
+    }
+    .widget p{margin:0 0 10px; color: var(--muted); font-size:14px}
+
+    .linklist{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .linklist a{
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background:#fff;
+      box-shadow: var(--shadow2);
+    }
+    .linklist a span{
+      color: var(--muted);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+
+    /* Directory section like old Blogger archive */
+    .archive{
+      padding: 18px;
+    }
+    .archive h2{
+      margin:0 0 10px;
+      font-size: 18px;
+      letter-spacing:-.2px;
+      color: var(--brand);
+    }
+    .archive p{margin:0 0 12px; color:var(--muted)}
+    .archive-grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .archive-grid a{
+      text-decoration:none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow: var(--shadow2);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .archive-grid em{
+      font-style:normal;
+      color: var(--muted);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+
+    /* Footer */
+    footer{
+      padding: 18px 0 36px;
+      border-top: 1px solid rgba(222,215,201,.9);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footgrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr .6fr;
+      gap: 12px;
+      align-items:start;
+    }
+    .footlinks{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .footlinks a{
+      text-decoration:none;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow: var(--shadow2);
+      color: var(--ink);
+    }
+    .legal a{
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(94,106,127,.35);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .layout{grid-template-columns: 1fr}
+      .archive-grid{grid-template-columns: 1fr}
+      .mast{flex-direction:column; align-items:flex-start}
+      .search{width:100%}
+      .search input{width:100%}
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">ข้ามไปยังเนื้อหา</a>
+
+  <div class="topstrip">
+    <div class="wrap inner">
+      <div class="pill">BuyDatabase Store • Blogger 2.0 Layout</div>
+      <div class="pill">อัปเดตปี <span id="yTop"></span> • สถานะ: <strong>ออนไลน์</strong></div>
+    </div>
+  </div>
+
+  <header class="sitehead">
+    <div class="wrap">
+      <div class="mast">
+        <div class="titlebox">
+          <div class="logo" aria-hidden="true">BD</div>
+          <div>
+            <h1 class="blogname">BuyDatabase Store</h1>
+            <p class="tagline">บล็อกสไตล์ Blogger 2.0 • โพสต์หลัก + ไซด์บาร์ • รวมลิงก์แบบเป็นระเบียบ</p>
+          </div>
+        </div>
+        <div class="pill" style="border-color:rgba(94,106,127,.35); background:rgba(255,255,255,.14)">
+          โดเมน: <strong>buydatabase.store</strong>
+        </div>
+      </div>
+
+      <!-- Menu (ห้ามลบลิงก์เดิม / ใส่เป็น “เมนูลัด”) -->
+      <nav class="menubar" aria-label="Main menu">
+        <div class="menu">
+          <a class="active" href="#content">หน้าแรก</a>
+          <a href="#post">บทความ</a>
+          <a href="#archive">Directory</a>
+          <a href="#cta">ทางออกหลัก</a>
+        </div>
+
+        <!-- search UI (ไม่ทำงานจริง เป็น UI แบบ Blogger) -->
+        <div class="search" aria-label="Search (UI)">
+          <input type="search" placeholder="ค้นหาในหน้านี้ (ตัวอย่าง UI)..." />
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="wrap">
+    <div class="layout">
+      <!-- POSTS -->
+      <section>
+        <article id="post" class="card">
+          <div class="post">
+            <div class="meta">
+              <span class="badge">โพสต์เด่น</span>
+              <span>อัปเดตล่าสุด: <strong>ปี <span id="y"></span></strong></span>
+            </div>
+
+            <h1>แนวทางทำหน้า “Directory Blog” ให้ดูน่าเชื่อถือ</h1>
+
+            <p>
+              หากคุณต้องการหน้าเว็บที่ดูเหมือนบล็อกยุค Blogger 2.0 (มีโพสต์หลัก + ไซด์บาร์)
+              วิธีที่ได้ผลคือทำให้หน้าแรกอ่านได้เหมือนบทความจริง แล้วค่อยพาคนไปที่ลิงก์สำคัญทีละส่วน
+              เพื่อให้ทุกลิงก์ดูมีเหตุผลในการคลิก ไม่ใช่แค่ลิสต์ยาว ๆ
+            </p>
+
+            <p>
+              ตัวอย่างการอ้างอิงลิงก์แบบมีบริบท:
+              เมื่อต้องพูดถึงแหล่งข้อมูล ให้ใส่ลิงก์ไว้ในข้อความ เช่น
+              <a class="inline" href="https://lamarsalaplayadegandia.com/" target="_blank" rel="noopener noreferrer">Data HK</a>
+              เพื่อให้ดูเป็นธรรมชาติและอ่านลื่น
+            </p>
+
+            <p>
+              สำหรับเมนูลัดด้านบน เราเก็บลิงก์ภายนอกไว้ครบ “ตามเดิม” (ไม่เปลี่ยน/ไม่ลบ)
+              และแยกพื้นที่ไว้ใน Sidebar/Archive ให้หาได้ง่ายขึ้น
+            </p>
+          </div>
+
+          <div id="cta" class="callout">
+            <div>
+              <strong style="color:var(--brand)">ทางออกหลัก (CTA)</strong><br />
+              <span style="color:var(--muted);font-size:14px">คลิกเพื่อเข้าหน้าปลายทางที่กำหนด</span>
+            </div>
+
+            <!-- ลิงก์ต้องคงเดิม -->
+            <a class="btn" href="http://178.128.215.158/paito-sdy-data-paito-warna-sydney-pools-terbaru/" target="_blank" rel="noopener noreferrer">
+              เปิด Paito SDY
+            </a>
+          </div>
+        </article>
+
+        <!-- ARCHIVE (list besar) -->
+        <section id="archive" class="card" style="margin-top:14px">
+          <div class="archive">
+            <h2>Archive / Directory (ลิงก์ทั้งหมด)</h2>
+            <p>ส่วนนี้รวบรวมลิงก์ภายนอกทั้งหมดแบบ “คลังบล็อก” ให้ไล่ดูง่าย (คงลิงก์เดิม 100%)</p>
+
+            <div class="archive-grid" aria-label="All external links">
+              <!-- อย่าลบ/อย่าเปลี่ยน -->
+              <a href="https://airport-parking-quote.co.uk/" target="_blank" rel="noopener">Airport Parking Quote UK <em>external</em></a>
+              <a href="https://beyondtrends.store/" target="_blank" rel="noopener">Beyond Trends <em>external</em></a>
+              <a href="https://cave222.org/" target="_blank" rel="noopener">Cave222 <em>external</em></a>
+              <a href="https://digitalgoodies.store/" target="_blank" rel="noopener">Digital Goodies <em>external</em></a>
+              <a href="https://elvvaws.org/" target="_blank" rel="noopener">ELVVAWS <em>external</em></a>
+              <a href="https://expressthoughts.site/" target="_blank" rel="noopener">Express Thoughts <em>external</em></a>
+              <a href="https://feltribute.xyz/" target="_blank" rel="noopener">Fel Tribute <em>external</em></a>
+              <a href="https://flakey.info/" target="_blank" rel="noopener">Flakey Notes <em>external</em></a>
+              <a href="https://football-livescore.co.uk/" target="_blank" rel="noopener">Football LiveScore UK <em>external</em></a>
+              <a href="https://freeflowingthoughts.site/" target="_blank" rel="noopener">Free Flowing Thoughts <em>external</em></a>
+              <a href="https://genericlevitra-buy.info/" target="_blank" rel="noopener">Generic Levitra Info <em>external</em></a>
+              <a href="https://healthyvoices.org/" target="_blank" rel="noopener">Healthy Voices <em>external</em></a>
+              <a href="https://jobseek.us/" target="_blank" rel="noopener">JobSeek US <em>external</em></a>
+              <a href="https://juicylucyinfo.co.uk/" target="_blank" rel="noopener">Juicy Lucy Info UK <em>external</em></a>
+              <a href="https://katanaownersclub.co.uk/" target="_blank" rel="noopener">Katana Owners Club UK <em>external</em></a>
+              <a href="https://kolkataescortsxx.info/" target="_blank" rel="noopener">Kolkata City Notes <em>external</em></a>
+              <a href="https://laotzu.store/" target="_blank" rel="noopener">Lao Tzu Store <em>external</em></a>
+              <a href="https://lifestylepulse.site/" target="_blank" rel="noopener">Lifestyle Pulse <em>external</em></a>
+              <a href="https://longchampbags.uk/" target="_blank" rel="noopener">Longchamp Bags UK <em>external</em></a>
+              <a href="https://machynllethgolfclub.co.uk/" target="_blank" rel="noopener">Machynlleth Golf Club <em>external</em></a>
+              <a href="https://mailstorm.biz/" target="_blank" rel="noopener">MailStorm <em>external</em></a>
+              <a href="https://masjidmekarindah.id/" target="_blank" rel="noopener">Masjid Mekar Indah <em>external</em></a>
+              <a href="https://michaels-kors.co.uk/" target="_blank" rel="noopener">Michael&#39;s Kors UK <em>external</em></a>
+              <a href="https://middlefieldma.us/" target="_blank" rel="noopener">Middlefield MA <em>external</em></a>
+              <a href="https://musclesteroids.info/" target="_blank" rel="noopener">Muscle Steroids Info <em>external</em></a>
+              <a href="https://mypet24.co.uk/" target="_blank" rel="noopener">MyPet24 UK <em>external</em></a>
+              <a href="https://portpatrick-brewery.co.uk/" target="_blank" rel="noopener">Portpatrick Brewery <em>external</em></a>
+              <a href="https://racingshares.co.uk/" target="_blank" rel="noopener">Racing Shares UK <em>external</em></a>
+              <a href="https://replicamarket.co.uk/" target="_blank" rel="noopener">Replica Market UK <em>external</em></a>
+              <a href="https://scriblerian.net/" target="_blank" rel="noopener">Scriblerian University <em>external</em></a>
+              <a href="https://shanbehzadeh.art/" target="_blank" rel="noopener">Shanbehzadeh Art <em>external</em></a>
+              <a href="https://seafishnottingham.co.uk/" target="_blank" rel="noopener">Sea Fish Nottingham <em>external</em></a>
+              <a href="https://smallde.com/" target="_blank" rel="noopener">SmallDE <em>external</em></a>
+              <a href="https://sobattogel.store/" target="_blank" rel="noopener">Sobat Togel <em>external</em></a>
+              <a href="https://togelonline.space/" target="_blank" rel="noopener">Togel Online <em>external</em></a>
+              <a href="https://ubbgloucestershire.org/" target="_blank" rel="noopener">UBB Gloucestershire <em>external</em></a>
+              <a href="https://unitedforcharitableassistance.org/" target="_blank" rel="noopener">United for Charitable Assistance <em>external</em></a>
+              <a href="https://webmaster-cs.xyz/" target="_blank" rel="noopener">Webmaster CS <em>external</em></a>
+              <a href="https://webprediksibola.id/" target="_blank" rel="noopener">Web Prediksi Bola <em>external</em></a>
+              <a href="https://youth-diplomacy.org/" target="_blank" rel="noopener">Youth Diplomacy <em>external</em></a>
+              <a href="https://jujutsukaisen.io/" target="_blank" rel="noopener">Anoboy <em>external</em></a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside class="card" aria-label="Sidebar">
+        <div class="widget">
+          <h3>ลิงก์ทางลัด (คงเดิม)</h3>
+          <ul class="linklist">
+            <!-- ห้ามเปลี่ยน/ห้ามลบ -->
+            <li><a href="https://pafiairseruk.org/" target="_blank" rel="noopener noreferrer">Data HK <span>shortcut</span></a></li>
+            <li><a href="https://pafitanglad.org/" target="_blank" rel="noopener noreferrer">Data SDY <span>shortcut</span></a></li>
+            <li><a href="https://myfilerecovery.net/" target="_blank" rel="noopener noreferrer">Data SGP <span>shortcut</span></a></li>
+            <li><a href="https://datahklotto.us/" target="_blank" rel="noopener noreferrer">Data HK Lotto <span>shortcut</span></a></li>
+            <li><a href="https://pafiprayabaratdaya.org/" target="_blank" rel="noopener noreferrer">Data SDY Lotto <span>shortcut</span></a></li>
+            <li><a href="https://pafiprayatimur.org/" target="_blank" rel="noopener noreferrer">Data SDY Lotto <span>shortcut</span></a></li>
+          </ul>
+        </div>
+
+        <div class="widget">
+          <h3>หมายเหตุการใช้งาน</h3>
+          <p>
+            ถ้าต้องใส่ลิงก์ในเนื้อหา ให้ใช้แบบ “อ้างอิง” เช่น
+            <a class="inline" href="https://pafiboyolalikota.info/" target="_blank" rel="noopener noreferrer">Angkanet</a>
+            เพื่อให้ดูเป็นธรรมชาติและไม่รก
+          </p>
+        </div>
+
+        <div class="widget">
+          <h3>Footer links (คงเดิม)</h3>
+          <div class="footlinks">
+            <!-- รายการที่คุณให้มา (คงเดิม) -->
+            <a href="https://pafijatimkabmadiun.org/" target="_blank" rel="noopener">Data HK Lotto</a>
+            <a href="https://pafiprayatimur.org/" target="_blank" rel="noopener">Data SDY Lotto</a>
+            <a href="https://pafiairseruk.org/" target="_blank" rel="noopener">Data HK</a>
+            <a href="https://myfilerecovery.net/" target="_blank" rel="noopener">Data SGP</a>
+            <a href="https://pafiprayabarat.org/" target="_blank" rel="noopener">Data SDY</a>
+            <a href="https://lamarsalaplayadegandia.com/" target="_blank" rel="noopener">Data HK</a>
+            <a href="https://pafiprayabaratdaya.org/" target="_blank" rel="noopener">Data SDY Lotto</a>
+            <a href="https://wholesalejerseys4sale.com/" target="_blank" rel="noopener">Prediksi Keluaran</a>
+            <a href="https://pafibenermeriahkabupaten.org/" target="_blank" rel="noopener">Prediksi Jitu</a>
+            <a href="https://pafisemarapuraklod.org/" target="_blank" rel="noopener">Prediksi SDY</a>
+            <a href="https://prediksihkpools.net/" target="_blank" rel="noopener">Prediksi HK</a>
+            <a href="http://178.128.215.158/" target="_blank" rel="noopener">Angkanet</a>
+            <a href="https://pafiboyolalikota.info/" target="_blank" rel="noopener">Angkanet</a>
+            <a href="https://pafiblitarkota.info/" target="_blank" rel="noopener">Data HK 6D</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footgrid">
+      <div>
+        <strong style="color:var(--ink)">BuyDatabase Store</strong>
+        <p style="margin:6px 0 0">
+          ธีมหน้าแบบ Blogger 2.0 (โพสต์ + ไซด์บาร์ + คลังลิงก์) สำหรับโดเมน buydatabase.store
+        </p>
+      </div>
+
+      <div class="footlinks" aria-label="Extra links">
+        <!-- คงเดิม -->
+        <a href="https://pafisemarapuraklod.org/" target="_blank" rel="noopener noreferrer">Prediksi SDY</a>
+        <a href="https://prediksihkpools.net/" target="_blank" rel="noopener noreferrer">Prediksi HK</a>
+        <a href="http://178.128.215.158/" target="_blank" rel="noopener noreferrer">Angkanet</a>
+      </div>
+
+      <div class="legal">
+        <div><a href="/privacy.html">Privacy Policy</a> (buat file jika diperlukan)</div>
+        <div>© <span id="yFoot"></span> buydatabase.store</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const y = new Date().getFullYear();
+    document.getElementById('yTop').textContent = y;
+    document.getElementById('y').textContent = y;
+    document.getElementById('yFoot').textContent = y;
+  </script>
+</body>
+</html>
